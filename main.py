@@ -28,9 +28,10 @@ while loopcount < len(pdfReader.pages):
         temperature=0.9,
         max_tokens=900,
         top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0,
-        stop=["\n"]
+        #comment penalty and stop in case of blank response.
+        #frequency_penalty=0,
+        #presence_penalty=0,
+        #stop=["\n"]
     )
     print(response["choices"][0]["text"])
 
